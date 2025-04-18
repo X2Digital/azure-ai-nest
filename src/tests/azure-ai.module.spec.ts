@@ -1,6 +1,6 @@
 import { Test } from '@nestjs/testing';
-import { AzureAiModule } from './azure-ai.module';
-import { AZURE_AI_CLIENT } from './azure-ai.constants';
+import { AzureAiModule } from '../azure-ai.module';
+import { AZURE_AI_CLIENT } from '../azure-ai.constants';
 
 describe('AzureAiModule', () => {
   it('should register forRoot with provider', async () => {
