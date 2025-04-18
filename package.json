@@ -1,6 +1,6 @@
 {
   "name": "@x2d/azure-ai-nest",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "NestJS Global Module wrapping @azure/ai-projects",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
