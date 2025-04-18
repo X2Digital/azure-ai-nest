@@ -31,7 +31,15 @@ export class AzureAiModule {
     const azureAiProvider: Provider = {
       inject: asyncOptions.inject ?? [],
       provide: AZURE_AI_CLIENT,
-      useFactory: (options: AzureAiModuleOptions) => buildClient(options),
+      useFactory: async (...args) => {
+        const options = await  asyncOptions.useFactory?.(...args);
+        
+        if (!options) {
+          throw new Error('AzureAiModuleOptions is required');
+        }
+        
+        return buildClient(options);
+      },
     };
     const asyncProviders = AzureAiModule.createAsyncProviders(asyncOptions);
 

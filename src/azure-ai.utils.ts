@@ -1,9 +1,9 @@
 import { AIProjectsClient } from '@azure/ai-projects';
-import { AzureDeveloperCliCredential } from '@azure/identity';
+import { DefaultAzureCredential } from '@azure/identity';
 import type { AzureAiModuleOptions } from './azure-ai.interfaces';
 
 export function buildClient(opts: AzureAiModuleOptions): AIProjectsClient {
-  const cred = new AzureDeveloperCliCredential();
+  const cred = new DefaultAzureCredential();
 
   if ('connectionString' in opts) {
     return AIProjectsClient.fromConnectionString(opts.connectionString, cred);
