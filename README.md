@@ -4,10 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/@x2d/azure-ai-nest)](https://www.npmjs.com/package/@x2d/azure-ai-nest)
 [![CI](https://github.com/x2digital/azure-ai-nest/actions/workflows/ci.yml/badge.svg)](https://github.com/x2digital/azure-ai-nest)
-![node-current](https://img.shields.io/node/v/@x2d/azure-ai-nest)
-[![Downloads](https://img.shields.io/npm/dm/@x2d/azure-ai-nest.svg)](https://www.npmjs.com/package/@your-scope/azure-ai-nest)
 [![License](https://img.shields.io/npm/l/@x2d/azure-ai-nest.svg)](LICENSE)
-[![Coverage](https://img.shields.io/codecov/c/github/x2digital/azure-ai-nest)](https://codecov.io/gh/x2digital/azure-ai-nest)
 
 
 ---
@@ -48,7 +45,6 @@ import { AzureAiModule } from '@x2d/azure-ai-nest';
     AzureAiModule.forRoot({ connectionString: process.env.AZURE_AI_PROJECTS_CONNECTION_STRING! }),
 
     // ✅ or Async factory (config service, secrets, etc.)
-    /*
     AzureAiModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -57,7 +53,6 @@ import { AzureAiModule } from '@x2d/azure-ai-nest';
         credential: undefined, // fallback to DefaultAzureCredential chain
       }),
     }),
-    */
   ],
 })
 export class AppModule {}
@@ -75,52 +70,6 @@ export class MyService {
   }
 }
 ```
-
----
-
-## 🛠 API
-
-| Option                 | Type                         | Default | Notes |
-|------------------------|------------------------------|---------|-------|
-| `connectionString`     | `string`                     | –       | Typical **Key + Endpoint** string. |
-| `endpoint`             | `string`                     | –       | HTTPS endpoint, e.g. `https://my-ai-projects.eastus.azure.com`. |
-| `credential`           | `TokenCredential`            | `new DefaultAzureCredential()` | Pass a custom cred (Managed Identity, ClientSecret, etc.). |
-
-*If both `connectionString` **and** `endpoint` are omitted the SDK will follow its normal env‑var / managed‑identity discovery.*
-
----
-
-## 🧪 Development
-
-```bash
-# lint & type‑check (optional)
-npm run lint
-
-# unit tests
-npm test
-
-# build ESM + CJS + d.ts (dist/)
-npm build
-```
-
-The project uses **[tsup]** for a zero‑config bundle and **Jest** for tests. Feel free to swap for your favourites.
-
----
-
-## 📦 Publishing
-
-```bash
-npm version patch  # or minor / major
-npm publish --access public
-```
-
-The `prepublishOnly` hook runs `build` and `test` to guarantee a clean artifact.
-
----
-
-## 💡 Extending
-
-Need retries, logging, custom policies?  Fork or simply duplicate `buildClient()` in *src/azure-ai.module.ts* and add decorators from the Azure SDK core.
 
 ---
 
