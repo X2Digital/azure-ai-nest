@@ -4,6 +4,11 @@
 
 [![npm](https://img.shields.io/npm/v/@x2d/azure-ai-nest)](https://www.npmjs.com/package/@x2d/azure-ai-nest)
 [![CI](https://github.com/x2digital/azure-ai-nest/actions/workflows/ci.yml/badge.svg)](https://github.com/x2digital/azure-ai-nest)
+![node-current](https://img.shields.io/node/v/@x2d/azure-ai-nest)
+[![Downloads](https://img.shields.io/npm/dm/@x2d/azure-ai-nest.svg)](https://www.npmjs.com/package/@your-scope/azure-ai-nest)
+[![License](https://img.shields.io/npm/l/@x2d/azure-ai-nest.svg)](LICENSE)
+[![Coverage](https://img.shields.io/codecov/c/github/x2digital/azure-ai-nest)](https://codecov.io/gh/x2digital/azure-ai-nest)
+
 
 ---
 

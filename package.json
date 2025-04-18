@@ -65,5 +65,8 @@
     "nestjs"
   ],
   "author": "Diego F Lamarão",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
 }
